@@ -3,53 +3,56 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 #include <Wire.h>
-#include "DHT.h"
+//#include "DHT.h"
 #include <ESP8266WebServer.h>
 #include <FS.h>
 #include <LittleFS.h>
 #include "secrets.h"
-#include "Home.h"
+//#include "Home.h"
 #include "Seg_Display.h"
 
 
-#define DHTPIN D5
-#define DHTTYPE DHT11
+//#define DHTPIN D5
+//#define DHTTYPE DHT11
 //#define ntpServerName "au.pool.ntp.org"
 //#define timeZone "AEST-10AEDT,M10.0,M4.1.0/3"
 
-DHT dht(DHTPIN, DHTTYPE);  //DHT_Unified
+///DHT dht(DHTPIN, DHTTYPE);  //DHT_Unified
 ESP8266WebServer server(80);
+
+//const char ssid[] = "STASSID";  //  your network SSID (name)
+//const char pass[] = "STAPSK";
 
 
 // NTP Servers:
-static const char ntpServerName[] = "au.pool.ntp.org";
-const int timeZone = +10;
+//static const char ntpServerName[] = "au.pool.ntp.org";
+//const int timeZone = +10;
 
 
-WiFiUDP Udp;
-unsigned int localPort = 8888;
+//WiFiUDP Udp;
+//unsigned int localPort = 8888;
 
-time_t getNtpTime();
-time_t prevDisplay = 0;
-void printDigits(int digits);
-void sendNTPpacket(IPAddress &address);
+//time_t getNtpTime();
+//time_t prevDisplay = 0;
+//void printDigits(int digits);
+//void sendNTPpacket(IPAddress &address);
 
-/* // when the digital clock was displayed
+// when the digital clock was displayed
 byte g_digits [10];                  // Definitions of the 7-bit values for displaying digits
 byte g_digits2 [10];
 int g_numberToDisplay = 0;          // default number being displayed, 0 
 const int g_registers = 4;          // Number of shift registers in use, 4
 byte g_registerArray [g_registers]; // Array of numbers to pass to shift registers
-*/
+
+
 const int g_pinData = D3;         //D1
 const int g_pinCommLatch = D2;    //D2
 const int g_pinClock = D1;        //D3
 const int dot1 = D7;
 const int dot2 = D8;
-int temp = 0;
-int humid = 0;
-int timeH = 0;
-int timeM = 0;
+//int temp = 0;
+//int humid = 0;
+
 
 
 
@@ -72,7 +75,7 @@ int a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, g = 64;
     g_digits2 [2] = 32 + 16;                            //64 + 16;                   //  r, 80
     g_digits2 [3] = 1 + 32 + 16 + 2;                    //4 + 16 + 32 + 64;           //  h, 116
     g_digits [99] = 0;
-
+/*
     for (int i=0;i<5;i++) {
   
     g_registerArray [0] = g_digits [8];
@@ -90,10 +93,9 @@ int a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, g = 64;
    
     sendSerialData (g_registers, g_registerArray);
     delay(200);
-}
+}*/
 }
 
-time_t prevDisplay = 0;
 /*
 Serial.begin(115200);
   while (!Serial) ; // Needed for Leonardo only
@@ -126,43 +128,24 @@ Serial.begin(115200);
   Serial.println("HTTP server started");
 */
 void loop(){
-  
-  if (timeStatus() != timeNotSet) {
+  Seg_Display;
+ /* if (timeStatus() != timeNotSet) {
     if (now() != prevDisplay) { //update the display only if time has changed
       prevDisplay = now();
       if ((second() == 00) || (second() == 15) ||(second() == 30) ||(second() == 45)){
-        digitalTempDisplay();
+        Seg_Display_Temp;
         delay (100);
-        digitalHumidDisplay();
+        Seg_Display_Humid;
         delay (200);
       }else{
-        digitalClockDisplay();
+        Seg_Display;
       }
     }
-  }
+  }*/
 
 }
 
-void Seg_Display(){
-  
-  // digital clock display of the time//
-  
-   g_registerArray [0] = g_digits [hourFormat12() / 10];
-   g_registerArray [1] = g_digits [hourFormat12() % 10];
-   g_registerArray [2] = g_digits [minute() / 10];
-   g_registerArray [3] = g_digits [minute() % 10];
 
-   sendSerialData (g_registers, g_registerArray);
-
-   //blink column//
-   
-   digitalWrite(dot1, HIGH);
-   digitalWrite(dot2, HIGH);
-   delay(500);
-   digitalWrite(dot1, LOW);
-   digitalWrite(dot2, LOW);
-   delay(500);
-}
 
 /*-------- NTP code ----------*/
 
