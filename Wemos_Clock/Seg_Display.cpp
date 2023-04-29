@@ -2,9 +2,13 @@
 #include <Arduino.h>
 #include "DHT.h"
 #include <TimeLib.h>
+#include <ESP8266WiFi.h>
+#include <WiFiUdp.h>
 
 #define DHTPIN D5
 #define DHTTYPE DHT11
+#define ntpServerName "au.pool.ntp.org"
+//#define timeZone "AEST-10AEDT,M10.0,M4.1.0/3"
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -17,25 +21,39 @@ int temp = 0;
 int humid = 0;
 Seg_Display Display(byte registerCount, byte *pValueArray);
 
+/*  NTP TIME 
+const char* ntpServer = "au.pool.ntp.org";
+const long gmtOffset_sec = 0;
+const int daylightOffset_sec = 3600;
+configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+
+const int timeZone = +10;
+time_t getNtpTime();
+configTime(timeZone, ntpServerName);
+static const char ntpServerName[] = "au.pool.ntp.org";
+void sendNTPpacket(IPAddress &address);
+setSyncProvider(getNtpTime);
+setSyncInterval(300);
+unsigned int localPort = 8888;
+WiFiUDP Udp;
+*/
+
 //this section for pin and bit mask of digits accoring to my wiring setup (currently errors in compiling)
 
-int a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, g = 64;
 
-    g_digits [0] = 8 + 4 + 2 + 64 + 32 + 1;             //1 + 2 + 4 + 8 + 16 + 32;
-    g_digits [1] = 4 + 2;                               //2 + 4;
-    g_digits [2] = 8 + 4 + 16 + 32 + 64;                //1 + 2 + 64 + 16 + 8;
-    g_digits [3] = 8 + 4 + 16 + 2 + 64;                 //1 + 2 + 4 + 8 + 64;
-    g_digits [4] = 1 + 16 + 4 + 2;                      //32 + 64 + 2 + 4;
-    g_digits [5] = 8 + 1 + 16 + 2 + 64;                 //1 + 32 + 64 + 4 + 8;
-    g_digits [6] = 8 + 1 + 16 + 2 + 64 + 32;            //1 + 32 + 16 + 8 + 4 + 64;
-    g_digits [7] = 8 + 4 + 2;                           //1 + 2 + 4;
-    g_digits [8] = 1 + 2 + 4 + 8 + 16 + 32 + 64;        //1 + 2 + 4 + 8 + 16 + 32 + 64;
-    g_digits [9] = 1 + 8 + 4 + 16 + 2 + 64;             //8 + 4 + 2 + 1 + 32 + 64;
-    g_digits [99] = 0;                                  // blank digits
-    g_digits2 [0] = 1 + 8 + 4 + 16;                     //1 + 2 + 64 + 32;           // Degree dot
-    g_digits2 [1] = 8 + 1 + 32 + 64;                    //1 + 8 + 16 + 32;           // Capital C
-    g_digits2 [2] = 32 + 16;                            //64 + 16;                   //  r, 80
-    g_digits2 [3] = 1 + 32 + 16 + 2;                    //4 + 16 + 32 + 64;           //  h, 116
+void Seg_Display::g_digits(int a = 1,int b = 2,int c = 4,int d = 8,int e = 16,int f = 32,int g = 64){
+    g_digits [0] = 8 + 4 + 2 + 64 + 32 + 1;
+    g_digits [1] = 4 + 2;                             
+    g_digits [2] = 8 + 4 + 16 + 32 + 64;                
+    g_digits [3] = 8 + 4 + 16 + 2 + 64;                 
+    g_digits [4] = 1 + 16 + 4 + 2;                      
+    g_digits [5] = 8 + 1 + 16 + 2 + 64;                 
+    g_digits [6] = 8 + 1 + 16 + 2 + 64 + 32;            
+    g_digits [7] = 8 + 4 + 2;                           
+    g_digits [8] = 1 + 2 + 4 + 8 + 16 + 32 + 64;        
+    g_digits [9] = 1 + 8 + 4 + 16 + 2 + 64;
+}
+
     
 
 
