@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For SegDisplay
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SegDisplay		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+clearDisplay		KEYWORD2
+blinkDisplay		KEYWORD2
+updateDisplay		KEYWORD2
+DisplayTemp		KEYWORD2
+DisplayHumid		KEYWORD2
+DisplayDate		KEYWORD2
+DisplayYear		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+ShiftRegisters		LITERAL1
