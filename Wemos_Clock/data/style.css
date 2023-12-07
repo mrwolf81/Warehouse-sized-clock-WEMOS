@@ -1,0 +1,467 @@
+html {
+    font-family: 'Wallpoet', cursive;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+.title{
+    font-family: 'Wallpoet', cursive;
+}
+p {
+    font-size: 1.5rem;
+}
+.button {
+    display: inline-block;
+    background-color: #008CBA;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.button2 {
+    background-color: #f44336;
+}
+.units {
+    font-size: 1.2rem;
+}
+.sensor-labels {
+    font-size: 1.5rem;
+    vertical-align:middle;
+    padding-bottom: 15px;
+}
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.my-header{
+    font-family: 'Wallpoet', cursive;
+    color: #096b65;
+    -webkit-text-stroke: 2px #08f63f;
+    padding: 2vh;
+}
+.side-by-side{
+    display: table-cell; vertical-align: middle; position: static;
+}
+.text{
+    font-weight: 600;
+    font-size: 15px;
+    width: 160px;
+}
+.text2{
+    font-weight: 100;
+    font-size: 10px;
+    width: 160px;
+}
+.reading{
+    font-weight: 300;font-size: 10px;padding-right: 25px;padding-left :25px;
+}
+.temperature .reading{
+    color: #F29C1F;
+}
+.humidity .reading{
+    color: #3B97D3;
+}
+.time .reading{
+    color: #b406df;
+}
+.date2 .reading{
+  color: #b406df;
+}
+.timertc .reading{
+    color: #06b4df;
+}
+.datertc .reading{
+  color: #06b4df;
+}
+.date .reading{
+    color: #03bf10;
+}
+.wifi .reading{
+    color: #08f63f;
+}
+.superscript{
+    font-size: 1px;font-weight: 600;position: absolute;
+}
+.data{
+    padding: 5px;
+}
+.data2{
+    padding: 10px;
+}
+
+.container{
+    display: table;margin: 0 auto;
+}
+.icon{
+    width:65px
+}
+.information{
+    font-family:  'Rubik', sans-serif;
+    font-size: 15px;
+    color: #09db37;
+    -webkit-text-stroke: 0px #08f63f;
+    padding: 2vh;
+}
+.clockset{
+    font-family:  'Rubik', sans-serif;
+    font-size: 15px;
+    color: #09d1db;
+    -webkit-text-stroke: 0.2px #0828f6;
+    padding: 2vh;
+}
+.wifi{
+    font-family: 'Wallpoet', cursive;
+}
+.alarm{
+    font-family: 'Wallpoet', cursive;
+    font-size: 10px;
+}
+input[type=submit] {
+    background-color: #4706d4;
+    border-radius: 16px;
+    color: #fafbf8;
+    padding: 2px 10px;
+    text-decoration: none;
+    margin: 1px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+.form-check{
+    width: 300px;
+    height: 10px;
+    padding: 0;
+    margin-left: 42%;
+    vertical-align: relative;
+    position: relative;
+    top: 0px;
+}
+
+input[type=range] {
+    width: 50%;
+    margin: 50px 0;
+    background-color: transparent;
+    appearance:none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgba(58, 30, 70, 0.7);
+    border: 0.2px solid #800cc3;
+    border-radius: 50px;
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -5px;
+    width: 60px;
+    height: 60px;
+    background: rgb(73, 155, 141);
+    border: 5px solid #d6e905;
+    border-radius: 50px;
+    cursor: pointer;
+    appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #2b093f;
+}
+input[type=range]::-moz-range-track {
+    background: rgba(109, 3, 155, 0.7);
+    border: 0.2px solid #0cc337;
+    border-radius: 50px;
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 60px;
+    height: 60px;
+    background: #070606;
+    border: 5px solid #e9e105;
+    border-radius: 50px;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 21.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #462ea2;
+    border: 0.2px solid #000101;
+    border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+    background: rgba(70, 46, 162, 0.7);
+    border: 0.2px solid #000101;
+    border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border: 3.4px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(20, 201, 41, 0.7);
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #230bc0;
+}
+.DST{
+    font-family: 'Wallpoet', cursive;
+    font-size: 10px;
+    color: #1fe7e7;
+}
+
+.slider2
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+  cursor: pointer;
+  border: 4px solid transparent;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.slider2:before
+{
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: #861313;
+  border-radius: 30px;
+  transform: translateX(-25px); /*translateX(-(w-h))*/
+  transition: 0.2s;
+}
+
+input:checked + .slider2:before
+{
+  transform: translateX(0px); /*translateX(w-h)*/
+  background-color: limeGreen;
+}
+
+input:checked + .slider2
+{
+  box-shadow: 0 0 0 2px limeGreen, 0 0 4px limeGreen;
+}
+
+  .switch2 {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch2 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fcfafa;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(117, 12, 169);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 15px;
+    
+  }
+  
+  input:checked + .slider1 {
+    background-color: rgb(233, 238, 148);
+    
+  }
+  
+  input:focus + .slider1 {
+    box-shadow: 0 0 1px #a0eaa3;
+    
+  }
+  
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider1.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  input[type=time] {
+    border: none;
+    color: #01090e;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: helvetica;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Wrapper around the hour, minute, second, and am/pm fields as well as 
+  the up and down buttons and the 'X' button */
+  input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+  }
+  
+  /* The space between the fields - between hour and minute, the minute and 
+  second, second and am/pm */
+  input[type=time]::-webkit-datetime-edit-text {
+    padding: 19px 4px;
+  }
+  
+  /* The naming convention for the hour, minute, second, and am/pm field is
+  `-webkit-datetime-edit-{field}-field` */
+  
+  /* Hour */
+  input[type=time]::-webkit-datetime-edit-hour-field {
+    color: rgb(2, 2, 2);
+    background-color: #f7f9f9;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* Minute */
+  input[type=time]::-webkit-datetime-edit-minute-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* AM/PM */
+  input[type=time]::-webkit-datetime-edit-ampm-field {
+    background-color: #c3f0ee;
+    border-radius: 15%;
+    color: #020202;
+    padding: 19px 13px;
+  }
+  
+  /* 'X' button for resetting/clearing time */
+  input[type=time]::-webkit-clear-button {
+    display: none;
+  }
+  
+  /* Up/Down arrows for incrementing/decrementing the value */
+  input[type=time]::-webkit-inner-spin-button {
+    display: none;
+  }
+  input[type=date] {
+    border: none;
+    color: #01090e;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: helvetica;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Wrapper around the hour, minute, second, and am/pm fields as well as 
+  the up and down buttons and the 'X' button */
+  input[type=date]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+  }
+  
+  /* The space between the fields - between hour and minute, the minute and 
+  second, second and am/pm */
+  input[type=date]::-webkit-datetime-edit-text {
+    padding: 19px 4px;
+  }
+  
+  /* The naming convention for the hour, minute, second, and am/pm field is
+  `-webkit-datetime-edit-{field}-field` */
+  
+  /* Hour */
+  input[type=date]::-webkit-datetime-edit-day-field {
+    color: rgb(2, 2, 2);
+    background-color: #f7f9f9;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* Minute */
+  input[type=date]::-webkit-datetime-edit-month-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* AM/PM */
+  input[type=date]::-webkit-datetime-edit-year-field {
+    background-color: #c3f0ee;
+    border-radius: 15%;
+    color: #020202;
+    padding: 19px 13px;
+  }
+  
+  /* 'X' button for resetting/clearing time */
+  input[type=date]::-webkit-clear-button {
+    display: none;
+  }
+  
+  /* Up/Down arrows for incrementing/decrementing the value */
+  input[type=date]::-webkit-inner-spin-button {
+    display: none;
+  }
+  input[type=button] {
+    background-color: #4706d4;
+    border-radius: 16px;
+    color: #fafbf8;
+    padding: 2px 10px;
+    text-decoration: none;
+    margin: 1px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .bg_img {
+    background-image: url("/clock.jpg"); width: auto; height: auto;
+    height: 100%;
+    width: 100%;
+
+  }
