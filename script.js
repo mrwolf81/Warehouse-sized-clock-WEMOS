@@ -52,5 +52,4 @@ setInterval(function ( ) {
     xhttp.open("GET", "/date", true);
     xhttp.send();
   }, 1000 ) ;
-
   

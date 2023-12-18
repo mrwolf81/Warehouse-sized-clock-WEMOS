@@ -1,15 +1,47 @@
-html {
-    font-family: 'Wallpoet', cursive;
+.html {
+    font-family: 'Mansalva', sans-serif;
     display: inline-block;
     margin: 0px auto;
     text-align: center;
+    background-color: #000000;
+    color: #000000;
 }
-.title{
-    font-family: 'Wallpoet', cursive;
+.html {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+}
+.body{
+    margin: 0px;
+    background-color: #000000;
+}
+.h1 {
+  margin: 10px auto 30px;  
 }
 p {
     font-size: 1.5rem;
 }
+
+.navbar{
+  background:#000000;
+}
+.navbar-brand{
+  -webkit-text-fill-color: #f3f7f8;
+  font-family: 'Special Elite', sans-serif;
+}
+.nav-link{
+  -webkit-text-fill-color: #f7f9f9;
+  font-family: 'Special Elite', sans-serif;
+}
+.nav-menu{
+  font-family: 'Special Elite', sans-serif;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(102,255,247, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+  border-color: rgb(102, 255, 247);
+} 
 .button {
     display: inline-block;
     background-color: #008CBA;
@@ -41,41 +73,63 @@ p {
   'opsz' 24
 }
 .my-header{
-    font-family: 'Wallpoet', cursive;
-    color: #096b65;
-    -webkit-text-stroke: 2px #08f63f;
-    padding: 2vh;
+    font-family: 'Mansalva', sans-serif;
+    font-size: 45px;
+    color: #02f7f7;
+    text-shadow: #f2f5f6;
+    animation: glow 1s ease-in-out infinite alternate
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6, 0 0 45px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6, 0 0 80px #0073e6;
+  }
 }
 .side-by-side{
     display: table-cell; vertical-align: middle; position: static;
 }
 .text{
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 100;
+    font-size: 20px;
     width: 160px;
 }
 .text2{
+    font-family: 'Creepster',sans-serif;
     font-weight: 100;
-    font-size: 10px;
+    font-size: 20px;
     width: 160px;
 }
 .reading{
-    font-weight: 300;font-size: 10px;padding-right: 25px;padding-left :25px;
+    font-weight: 100;font-size: 20px;padding-right: 25px;padding-left :25px;
 }
 .temperature .reading{
     color: #F29C1F;
+    font-family: 'bungee',sans-serif;
 }
 .humidity .reading{
     color: #3B97D3;
+    font-family: 'bungee',sans-serif;
 }
 .time .reading{
     color: #b406df;
+    font-family: 'bungee',sans-serif;
+}
+.time2 .reading{
+  color: #b406df;
+  font-family: 'bungee',sans-serif;
+}
+.date .reading{
+  color: #008CBA;
+  font-family: 'bungee',sans-serif;
 }
 .date2 .reading{
   color: #b406df;
 }
 .timertc .reading{
-    color: #06b4df;
+    color:  #06b4df;
+    font-family: 'bungee',sans-serif;
 }
 .datertc .reading{
   color: #06b4df;
@@ -84,10 +138,13 @@ p {
     color: #03bf10;
 }
 .wifi .reading{
-    color: #08f63f;
+    color: #d2f608;
 }
 .superscript{
-    font-size: 1px;font-weight: 600;position: absolute;
+    font-family: 'Bungee',sans-serif;
+    font-size: 1px;
+    font-weight: 600;
+    position: absolute;
 }
 .data{
     padding: 5px;
@@ -95,7 +152,6 @@ p {
 .data2{
     padding: 10px;
 }
-
 .container{
     display: table;margin: 0 auto;
 }
@@ -103,25 +159,43 @@ p {
     width:65px
 }
 .information{
-    font-family:  'Rubik', sans-serif;
+    font-family:  'Bungee', sans-serif;
     font-size: 15px;
     color: #09db37;
     -webkit-text-stroke: 0px #08f63f;
     padding: 2vh;
 }
-.clockset{
-    font-family:  'Rubik', sans-serif;
-    font-size: 15px;
-    color: #09d1db;
-    -webkit-text-stroke: 0.2px #0828f6;
-    padding: 2vh;
+.information2{
+  font-family:  'luckiest guy', sans-serif;
+  font-size: 20px;
+  color: #09dbcd;
+  -webkit-text-stroke: 0px #08f63f;
+  padding: 2vh;
 }
-.wifi{
-    font-family: 'Wallpoet', cursive;
+.wifitext{
+    font-family: 'Macondo', cursive;
+    font-size: 15px;
+    color: #4aef35;
+}
+.mainsetting2{
+  font-family: 'Mansalva',sans-serif;
+  font-size: 20px;
+  color: #b92dfa;
 }
 .alarm{
-    font-family: 'Wallpoet', cursive;
-    font-size: 10px;
+    font-family: 'special elite', cursive;
+    font-size: 15px;
+    color: #bf1903;
+}
+.alarm2{
+  font-family: 'special elite', cursive;
+  font-size: 10px;
+  color: #eaa721;
+}
+.alarm3{
+  font-family: 'special elite', cursive;
+  font-size: 15px;
+  color: #fbfb22;
 }
 input[type=submit] {
     background-color: #4706d4;
@@ -145,7 +219,7 @@ input[type=submit] {
 }
 
 input[type=range] {
-    width: 50%;
+    width: 30%;
     margin: 50px 0;
     background-color: transparent;
     appearance:none;
@@ -223,14 +297,8 @@ input[type=range]:focus::-ms-fill-lower {
     background: rgba(20, 201, 41, 0.7);
 }
 input[type=range]:focus::-ms-fill-upper {
-    background: #230bc0;
+    background: #290bed;
 }
-.DST{
-    font-family: 'Wallpoet', cursive;
-    font-size: 10px;
-    color: #1fe7e7;
-}
-
 .slider2
 {
   position: absolute;
@@ -245,7 +313,6 @@ input[type=range]:focus::-ms-fill-upper {
   overflow: hidden;
   transition: 0.2s;
 }
-
 .slider2:before
 {
   position: absolute;
@@ -257,32 +324,27 @@ input[type=range]:focus::-ms-fill-upper {
   transform: translateX(-25px); /*translateX(-(w-h))*/
   transition: 0.2s;
 }
-
 input:checked + .slider2:before
 {
   transform: translateX(0px); /*translateX(w-h)*/
   background-color: limeGreen;
 }
-
 input:checked + .slider2
 {
   box-shadow: 0 0 0 2px limeGreen, 0 0 4px limeGreen;
 }
-
   .switch2 {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
   }
-  
   /* Hide default HTML checkbox */
   .switch2 input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-  
   /* The slider */
   .slider1 {
     position: absolute;
@@ -295,7 +357,6 @@ input:checked + .slider2
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
   .slider1:before {
     position: absolute;
     content: "";
@@ -309,7 +370,6 @@ input:checked + .slider2
     border-radius: 15px;
     
   }
-  
   input:checked + .slider1 {
     background-color: rgb(233, 238, 148);
     
@@ -319,18 +379,15 @@ input:checked + .slider2
     box-shadow: 0 0 1px #a0eaa3;
     
   }
-  
   input:checked + .slider1:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
-  
   /* Rounded sliders */
   .slider1.round {
     border-radius: 34px;
   }
-  
   .slider.round:before {
     border-radius: 50%;
   }
@@ -342,23 +399,19 @@ input:checked + .slider2
     font-family: helvetica;
     width: 200px;
     border-radius: 10px;
-  }
-  
+  } 
   /* Wrapper around the hour, minute, second, and am/pm fields as well as 
   the up and down buttons and the 'X' button */
   input[type=time]::-webkit-datetime-edit-fields-wrapper {
     display: flex;
   }
-  
   /* The space between the fields - between hour and minute, the minute and 
   second, second and am/pm */
   input[type=time]::-webkit-datetime-edit-text {
     padding: 19px 4px;
   }
-  
   /* The naming convention for the hour, minute, second, and am/pm field is
   `-webkit-datetime-edit-{field}-field` */
-  
   /* Hour */
   input[type=time]::-webkit-datetime-edit-hour-field {
     color: rgb(2, 2, 2);
@@ -366,14 +419,12 @@ input:checked + .slider2
     border-radius: 15%;
     padding: 19px 13px;
   }
-  
   /* Minute */
   input[type=time]::-webkit-datetime-edit-minute-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
   }
-  
   /* AM/PM */
   input[type=time]::-webkit-datetime-edit-ampm-field {
     background-color: #c3f0ee;
@@ -381,12 +432,10 @@ input:checked + .slider2
     color: #020202;
     padding: 19px 13px;
   }
-  
   /* 'X' button for resetting/clearing time */
   input[type=time]::-webkit-clear-button {
     display: none;
   }
-  
   /* Up/Down arrows for incrementing/decrementing the value */
   input[type=time]::-webkit-inner-spin-button {
     display: none;
@@ -400,37 +449,31 @@ input:checked + .slider2
     width: 200px;
     border-radius: 10px;
   }
-  
   /* Wrapper around the hour, minute, second, and am/pm fields as well as 
   the up and down buttons and the 'X' button */
   input[type=date]::-webkit-datetime-edit-fields-wrapper {
     display: flex;
-  }
-  
+  } 
   /* The space between the fields - between hour and minute, the minute and 
   second, second and am/pm */
   input[type=date]::-webkit-datetime-edit-text {
     padding: 19px 4px;
   }
-  
   /* The naming convention for the hour, minute, second, and am/pm field is
   `-webkit-datetime-edit-{field}-field` */
-  
   /* Hour */
   input[type=date]::-webkit-datetime-edit-day-field {
     color: rgb(2, 2, 2);
     background-color: #f7f9f9;
     border-radius: 15%;
     padding: 19px 13px;
-  }
-  
+  } 
   /* Minute */
   input[type=date]::-webkit-datetime-edit-month-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
   }
-  
   /* AM/PM */
   input[type=date]::-webkit-datetime-edit-year-field {
     background-color: #c3f0ee;
@@ -438,12 +481,10 @@ input:checked + .slider2
     color: #020202;
     padding: 19px 13px;
   }
-  
   /* 'X' button for resetting/clearing time */
   input[type=date]::-webkit-clear-button {
     display: none;
   }
-  
   /* Up/Down arrows for incrementing/decrementing the value */
   input[type=date]::-webkit-inner-spin-button {
     display: none;
@@ -459,9 +500,172 @@ input:checked + .slider2
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
-  .bg_img {
-    background-image: url("/clock.jpg"); width: auto; height: auto;
-    height: 100%;
+  .mainsetting{
+    font-family: 'Mansalva',sans-serif;
+    font-size: 45px;
+    color: #7e04ab;
+    text-shadow: #f2f5f6;
+    animation: glow2 1s ease-in-out infinite alternate
+  }
+  @keyframes glow2 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #b400e6, 0 0 20px #b400e6, 0 0 25px #b400e6, 0 0 30px #b400e6, 0 0 35px #b400e6,0 0 45px #b400e6;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ba35f7, 0 0 40px #ba35f7, 0 0 50px #ba35f7, 0 0 60px #ba35f7, 0 0 70px #ba35f7, 0 0 45px #b400e6;
+    }
+  }
+  .alarmsetting{
+    font-family: 'bungee',sans-serif;
+    font-size: 45px;
+    color: #fd0202;
+    text-shadow: #050505;
+    animation: glow3 1s ease-in-out infinite alternate
+  }
+  @keyframes glow3 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e5a803, 0 0 20px #e5a803, 0 0 25px #e5a803, 0 0 30px #e5a803, 0 0 35px #e5a803;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f50817, 0 0 40px #f50817, 0 0 50px #f50817, 0 0 60px #f50817, 0 0 70px #f50817;
+    }
+  }
+  .wifisetting{
+    font-family: 'rubik doodle shadow',sans-serif;
+    font-size: 45px;
+    color: #0ef702;
+    text-shadow: #f2f5f6;
+    animation: glow4 1s ease-in-out infinite alternate
+  }
+  @keyframes glow4 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00e60f, 0 0 20px #00e60f, 0 0 25px #00e60f, 0 0 30px #00e60f, 0 0 35px #00e60f;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0e600, 0 0 40px #c0e600, 0 0 50px #c0e600, 0 0 60px #c0e600, 0 0 70px #c0e600;
+    }
+  }
+  .warning{
+    font-family: 'bungee',sans-serif;
+    font-size: 45px;
+    color: #fd0202;
+    text-shadow: #050505;
+    animation: glow5 1s ease-in-out infinite alternate
+  }
+  @keyframes glow5 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f50817, 0 0 20px #f50817, 0 0 25px #f50817, 0 0 30px #f50817, 0 0 35px #f50817;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f50817, 0 0 40px #f50817, 0 0 50px #f50817, 0 0 60px #f50817, 0 0 70px #f50817;
+    }
+  }
+  .hourchange{
+    font-family: 'Special Elite', sans-serif;
+    font-size: 15px;
+    color: #02f7f7;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .switch-container {
+    position: relative;
+    border-radius: 3.125em;
+    box-shadow: 0 .125em .25em rgba(#000, .2);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .switch-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 1;
     width: 100%;
-
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .switch-button {
+    display: inline-flex;
+    padding: 0 .375em;
+    border-radius: inherit;
+    border: .0625em solid #6b717b;
+    background-color: #aaafbb;
+    box-shadow: inset 0 0 .5em rgba(#000, .4);
+    transition-property: border-color, background-color;
+    transition-duration: .2s;
+    
+    .switch-input:checked + & {
+      border-color: #43316f;
+      background-color: #7550d9;
+    }
+  }
+  
+  .switch-button-inside {
+    display: inline-flex;
+    column-gap: 1em;
+    position: relative;
+    border-radius: inherit;
+    padding: .75em;
+    transform: translateX(-.375em);
+    background-image: linear-gradient(90deg, #c5c9d3 48%, #d5d7dd 52%);
+    box-shadow: 
+      inset .0625em 0 .0625em rgba(#fff, .4),
+      inset -.0625em 0 .0625em rgba(#fff, .4);
+    transition-property: transform;
+    transition-duration: .2s;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border-radius: inherit;
+      background-image: linear-gradient(90deg, #926afe 48%, #885bff 52%);
+      box-shadow: 
+        inset .0625em 0 .0625em rgba(#fff, .2),
+        inset -.0625em 0 .0625em rgba(#fff, .2);
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: .2s;
+    }
+    
+    .switch-input:checked + .switch-button > & {
+      transform: translateX(.375em);
+      
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .switch-icon {
+    width: 1em;
+    height: 1em;
+    fill: #fff;
+    filter: 
+      drop-shadow(0 .0625em .0625em rgba(#000, .4))
+      drop-shadow(0 0 .25em rgba(#fff, .4))
+      drop-shadow(0 0 .25em rgba(#fff, .4));
+    transition-property: fill;
+    transition-duration: .2s;
+    
+    &.off {
+      .switch-input:checked + .switch-button & {
+        fill: #704ccf;
+        filter: none;
+      }
+    }
+    
+    &.on {
+      .switch-input:not(:checked) + .switch-button & {
+        fill: #767c86;
+        filter: none;
+      }
+    }
   }
