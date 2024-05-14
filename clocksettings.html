@@ -114,10 +114,12 @@
                 <input type="submit" value="Sync RTC to NTP" class="sync" id="sync" name="sync">
               </form>
             </div>
-            <br>
             <div>
-              <div class="switch-container">
-                <input class="switch-input" type="checkbox">
+            <br>
+            <div>12hr on / 24hr off</div>
+            <form action="/hourChange"></form>
+              <div class="switch-container p-2">
+                <input class="switch-input" type="checkbox" id="outputState" name="input" onchange="toggleCheckbox(this)">
                 <div class="switch-button">
                   <div class="switch-button-inside">
                     <svg class="switch-icon off" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -129,10 +131,12 @@
                   </div>
                 </div>
               </div>
+            </form>
+            </div>
+              <br>
             <div class="pb-lg-5"></div>
-</section>
-</body>
-</body>
+  
+
 <script>
 
 function updateUPDRTC(element) {
@@ -140,6 +144,16 @@ function updateUPDRTC(element) {
   var updRTC = document.getElementById("datetimeRTC").value;
   console.log(updRTC);
   xhr.open("GET", "/updatertc?value="+updRTC, true);
+  xhr.send();
+}
+
+function toggleCheckbox(element){
+  let xhr = new XMLHttpRequest();
+  if(element.checked){
+    xhr.open("GET", "/update?state=1",true);
+  }else{
+    xhr.open("GET", "/update?state=0", true);
+  }
   xhr.send();
 }
 
@@ -151,6 +165,9 @@ document.querySelector('.switch-input').addEventListener('change', () => {
   });
 
 </script>
+</section>
+</body>
+</body>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
