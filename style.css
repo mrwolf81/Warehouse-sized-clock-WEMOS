@@ -3,7 +3,7 @@
     display: inline-block;
     margin: 0px auto;
     text-align: center;
-    background-color: #000000;
+    background-color: #cc0a0a;
     color: #000000;
 }
 .html {
@@ -529,6 +529,21 @@ input:checked + .slider2
     }
     to {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0e600, 0 0 40px #c0e600, 0 0 50px #c0e600, 0 0 60px #c0e600, 0 0 70px #c0e600;
+    }
+  }
+  .systemsetting{
+    font-family: 'Mansalva',sans-serif;
+    font-size: 45px;
+    color: #7cab04;
+    text-shadow: #f2f5f6;
+    animation: glow2 1s ease-in-out infinite alternate
+  }
+  @keyframes glow2 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bce600, 0 0 20px #bce600, 0 0 25px #bce600, 0 0 30px #bce600, 0 0 35px #bce600,0 0 45px #bce600;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bce600, 0 0 40px #bce600, 0 0 50px #bce600, 0 0 60px #bce600, 0 0 70px #bce600, 0 0 45px #bce600;
     }
   }
   .warning{
