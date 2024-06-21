@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
         <title>About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style2.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="Icons/favicon.svg">
     </head>
 <body>
+    
 <!--navagation bar-->
 <ul class="topnav">
-    <li><a href="/">Go to Home Page</a></li>
-    <li><a href="alarmsettings.html" class="nav-link">Alarm Settings</a></li>
-    <li><a href="wifisettings.html" class="nav-link">Wifi Settings</a></li>
-    <li><a href="systemsettings.html" class="nav-link">System Settings</a></li>
-    <li><a href="firmware.html" class="nav-link">Firmware Update</a></li>
-    <li class="active"><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="/">Home<span class="homeicon"></span></a>about</li>
+    <li class="dropdown" style="float: right; align-content: center;">
+        <a href="javascript:void(0)" class="dropbtn"><span class="settingicon"></span></a>
+        <div class="dropdown-content">
+            <a href="alarmsettings.html"><span class="alarmicon"></span><span>Alarm</span></a>
+            <a href="wifisettings.html"><span class="wifiicon"></span>Wifi</a>
+            <a href="systemsettings.html"><span class="systemicon"></span>System</a>
+            <a href="about.html"><span class="abouticon"></span>About</a>
+        </div>
+    </li>
 </ul>
+<header><h2 class="systemsetting">About</h2></header>
+<p class="pabout">
+    This is the end result of a project that started many years ago,
+    the links below will take you to the files used to build this clock.
+    Photos, schematics, web pages and code will be available via GitHub.
+</p>
+<div class="linkcenter">
+    <div class="links">
+        <span class="linkcap">
+            <table>
+                <tr>
+                    <th style="color: aliceblue;">Github</th>
+                    <th style="color: aliceblue;">Email</th>
+                </tr>
+                <tr>
+                    <th><a href="https://github.com/mrwolf81/Warehouse-sized-clock-WEMOS"><span class="githubicon"></span></a></th>
+                    <th><a href="mailto:mr.wolf.81.sw@gmail.com"><span class="wolficon"></span></a></th>
+                </tr>
+            </table>
+        </span>
+    </div>
+</div>
 </body>
 </html>
