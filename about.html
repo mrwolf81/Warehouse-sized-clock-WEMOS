@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    
     <head>
         <title>About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" type="image/x-icon" href="Icons/favicon.svg">
+        <link rel="stylesheet" type="text/css" href="icon.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
 <body>
     
 <!--navagation bar-->
 <ul class="topnav">
-    <li><a href="/">Home<span class="homeicon"></span></a>about</li>
+    <li><a href="/"><span class="material-symbols-outlined">home</span>Home</a></li>
     <li class="dropdown" style="float: right; align-content: center;">
-        <a href="javascript:void(0)" class="dropbtn"><span class="settingicon"></span></a>
+        <a href="javascript:void(0)" class="dropbtn"><span class="material-symbols-outlined">menu</span></a>
         <div class="dropdown-content">
-            <a href="alarmsettings.html"><span class="alarmicon"></span><span>Alarm</span></a>
-            <a href="wifisettings.html"><span class="wifiicon"></span>Wifi</a>
-            <a href="systemsettings.html"><span class="systemicon"></span>System</a>
-            <a href="about.html"><span class="abouticon"></span>About</a>
+            <a href="alarmsettings.html"><span class="material-symbols-outlined">alarm</span>Alarm</a>
+            <a href="wifisettings.html"><span class="material-symbols-outlined">wifi</span>wifi</a>
+            <a href="systemsettings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+            <a href="about.html"><span class="material-symbols-outlined">info</span>About</a>
         </div>
     </li>
 </ul>
-<header><h2 class="systemsetting">About</h2></header>
+
+<header class="systemsetting about"><h2 class="symbol">About</h2></header>
+
 <p class="pabout">
     This is the end result of a project that started many years ago,
     the links below will take you to the files used to build this clock.
@@ -31,16 +38,10 @@
 <div class="linkcenter">
     <div class="links">
         <span class="linkcap">
-            <table>
-                <tr>
-                    <th style="color: aliceblue;">Github</th>
-                    <th style="color: aliceblue;">Email</th>
-                </tr>
-                <tr>
-                    <th><a href="https://github.com/mrwolf81/Warehouse-sized-clock-WEMOS"><span class="githubicon"></span></a></th>
-                    <th><a href="mailto:mr.wolf.81.sw@gmail.com"><span class="wolficon"></span></a></th>
-                </tr>
-            </table>
+            <div class="btn-group">
+                <a href="https://github.com/mrwolf81/Warehouse-sized-clock-WEMOS"><button class="button">GitHub</button></a>
+                <a href="mailto:mr.wolf.81.sw@gmail.com"><button class="button">Email:</button></a>
+            </div>
         </span>
     </div>
 </div>

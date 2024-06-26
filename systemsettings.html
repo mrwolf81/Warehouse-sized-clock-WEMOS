@@ -4,50 +4,52 @@
     <title>System Settings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onload="isChecked()">
 <!--navagation bar-->
 <ul class="topnav">
-  <li><a href="/">Home<span class="homeicon"></span></a></li>
+  <li><a href="/"><span class="material-symbols-outlined">home</span>Home</a></li>
   <li class="dropdown" style="float: right; align-content: center;">
-      <a href="javascript:void(0)" class="dropbtn"><span class="settingicon"></span></a>
+      <a href="javascript:void(0)" class="dropbtn"><span class="material-symbols-outlined">menu</span></a>
       <div class="dropdown-content">
-          <a href="alarmsettings.html"><span class="alarmicon"></span><span>Alarm</span></a>
-          <a href="wifisettings.html"><span class="wifiicon"></span>Wifi</a>
-          <a href="systemsettings.html"><span class="systemicon"></span>System</a>
-          <a href="about.html"><span class="abouticon"></span>About</a>
+          <a href="alarmsettings.html"><span class="material-symbols-outlined">alarm</span>Alarm</a>
+          <a href="wifisettings.html"><span class="material-symbols-outlined">wifi</span>wifi</a>
+          <a href="systemsettings.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+          <a href="about.html"><span class="material-symbols-outlined">info</span>About</a>
       </div>
   </li>
 </ul>
 
-<header><h2 class="systemsetting">Settings Page</h2></header>
+<header class="systemsetting settings"><h2 class="symbol">System Settings</h2></header>
 
 <section>
   <div>
     <table class="ntptable">
       <tr class="ntptime">
-        <th><span class="clockicon"></span></th>
+        <th><span class="material-symbols-outlined">nest_clock_farsight_analog</span></th>
         <th><span>NTP Time :</span></th>
         <th><span class="text" id="time">%TIME%</span></th>
         <th><span class="text" id="ampm" style="font-size: small;">%AMPM%</span></th>
       </tr>
       <tr class="ntptime">
-        <th><span class="dateicon"></span></th>
+        <th><span class="material-symbols-outlined">calendar_month</span></th>
         <th><span class="text">NTP Date : </span></th>
         <th><span class="text" id="date">%DATE%</span></th>
         <th></th>
       </tr>
       <tr class="rtctime">
-        <th><span class="clockicon"></span></th>
+        <th><span class="material-symbols-outlined">nest_clock_farsight_analog</span></th>
         <th><span class="text">RTC Time : </span></th>
         <th><span class="text" id="timertc">%TIMERTC%</span></th>
         <th><span class="text" id="ampmRTC" style="font-size: small;">%AMPMRTC%</span></th>
       </tr>
       <tr class="rtctime">
-        <th><span class="dateicon"></span></th>
+        <th><span class="material-symbols-outlined">calendar_month</span></th>
         <th><span class="text">RTC Date : </span></th>
         <th><span class="text" id="datertc">%DATERTC%</span></th>
         <th></th>
@@ -60,17 +62,29 @@
   <div class="updatetime">
     <form action="/updatertc">
       <input type="datetime-local" id="datetimeRTC" name="datetimeRTC" onchange="updateUPDRTC(this)"><br><br>
-      <input type="submit" value="Update RTC" class="updRTC">
+      <input type="submit" value="Update RTC" class="updateRTC">
     </form>
   </div>
   <br>
   <div class="syncrtc">
     <form action="/syncrtc">
-      <input type="submit" value="Sync RTC to NTP" class="sync" id="sync" name="sync">
+      <input type="submit" value="Sync RTC" class="sync" id="sync" name="sync">
     </form>
   </div>
   <div>
 </section>
+
+<section class="form-group">
+  <div class="btn-group">
+    <form action="/twelve">
+        <input type="submit" class="button" value="12hr" name="twelve" id="twelve">
+    </form>
+    <form action="/twenty">
+        <input type="submit" class="button" value="24hr" name="twenty" id="twenty">
+    </form>
+  </div>
+</section>
+
 
 <section>
 <div class="slidecontainer">
@@ -88,13 +102,14 @@ xhr.open("GET", "/updatertc?value="+updRTC, true);
 xhr.send();
 }
 
-</script>
-</section>
-<script>
-  const toggle = document.querySelector('#toggle1');
-  const updateBackground = (event) => { 
-  document.body.classList.toggle1('on');
-}
+
+
+
+
+//const toggle = document.querySelector('#toggle1');
+//const updateBackground = (event) => {
+ ////document.body.classList.toggle1('on');
+//}
 
 toggle.addEventListener("click", () => document.body.classList.toggle('on') , false);
   function updateSliderPWM(element) {

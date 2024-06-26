@@ -1,20 +1,91 @@
 body {
     font-family: 'SpecialElite', sans-serif;
     background-color:rgb(0, 0, 0);
+    box-sizing: border-box;
   }
-@font-face{
-    font-family: SpecialElite;
-    src:url(fonts/SpecialElite-Regular.ttf)
-  }
-@font-face{
-    font-family: Mansalva;
-    src:url(fonts/Mansalva-Regular.ttf)
+* {
+
+    margin: 0;
+    padding: 0;
   }
 header {
-    background-color: #030303;
-    padding: 5px;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    > * {
+      margin: 2rem;
+    }
+  }
+.systemsetting {
+    --blur: 1.75rem;
+    --box-blur: calc(0.5 * var(--blur));
+    --glow: var(--color);
+    --size: 20rem;
+    align-items: center;
+    border-radius: 12px;
+    border: 4px solid currentColor;
+    box-shadow: 
+      /* --- "glass" tube --- */
+      /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+      /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+      /* --- glow --- */
+      /* inside */ inset 0 0 var(--box-blur) var(--glow),
+      /* outside */      0 0 var(--box-blur) var(--glow);
+    color: var(--color, rgb(252, 248, 248));
+    display: block;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 35px;
+    > * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .number { 
+      font-weight: 700; 
+    }
+    
+    .symbol { 
+      font-size: 2rem; 
+      font-family: 'Neon Glow';
+      text-shadow: 0 0 var(--blur) var(--glow);
+    }
+    &.index { --color: #0bf703; filter: saturate(175%);
+    width: fit-content;
+  }
+    &.wifi { --color: #1f02fd; filter: saturate(200%);
+    width: fit-content;
+  }
+    &.alarmpage { --color: #e31111; filter: saturate(200%);
+      width: fit-content;
+    }
+    &.settings { --color: #1f96bd; filter: saturate(100%);
+      width: fit-content;
+    }
+    &.about { --color: #f307db; filter: saturate(200%);
+    width: fit-content;
+    }
+}
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+.mansalva-regular {
+    font-family: "Mansalva", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Neon Glow';
+    src: url(https://assets.codepen.io/230569/NeonGlow-8VLz.ttf);
   }
 
 /*navbar*/
@@ -24,7 +95,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #050505;
+    background-color: #000000;
+    font-family: "Special Elite",sans-serif;
   } 
 .align-info{
     display: flex;
@@ -36,15 +108,13 @@ li {
 }
 li a, .dropbtn {
     display: inline-block;
-    color: rgb(252, 252, 251);
+    color: rgb(217, 250, 6);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;
   }
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(249, 249, 249, 0.2);
-  }
+
 li.dropdown {
     display: inline-block;
   }
@@ -53,7 +123,7 @@ li.dropdown {
     position: absolute;
     background-color: #050505;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(249, 249, 249, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(222, 247, 1, 0.2);
     z-index: 1;
     right: 0;
   }
@@ -65,88 +135,13 @@ li.dropdown {
     text-align: left;
   }
 .dropdown-content a:hover {
-  background-color: #6a6868;
+  background-color: #e1ff00;
 }
 .dropdown:hover .dropdown-content {
     display: block;
   }
-.homeicon {
-    background: url('Icons/home.svg');
-    height: 35px;
-    width: 35px;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: 35px;
-    padding: 3px;
-  }
-.settingicon {
-  background: url('Icons/settingsbutton.svg');
-  height: 35px;
-  width: 35px;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: 35px;
-  padding: 3px;
-}
-.alarmicon {
-  background: url('Icons/alarm.svg');
-  height: 20px;
-  width: 20px;
-  display: block;
-  padding: 3px;
-}
-.wifiicon {
-  background: url('Icons/wifi.svg');
-  height: 20px;
-  width: 20px;
-  display: block;
-  padding: 3px;
-}
-.systemicon {
-  background: url('Icons/system.svg');
-  height: 20px;
-  width: 20px;
-  display: block;
-  padding: 3px;
-}
-.firmwareicon {
-  background: url('Icons/firm.svg');
-  height: 20px;
-  width: 20px;
-  display: block;
-  padding: 3px;
-}
-.abouticon {
-  background: url('Icons/info.svg');
-  height: 20px;
-  width: 20px;
-  display: block;
-  padding: 3px;
-}
-.wifiicon2 {
-  background: url('Icons/wifi.svg');
-  background-size: contain;
-  height: 30px;
-  width: 30px;
-  display: block;
-  padding: 3px;
-}
-.tempicon {
-  background: url('Icons/temp.svg');
-  background-size: contain;
-  height: 30px;
-  width: 30px;
-  display: block;
-  padding: 3px;
-}
-.humidicon {
-  background: url('Icons/waterdrop.svg');
-  background-size: contain;
-  height: 30px;
-  width: 30px;
-  display: block;
-  padding: 3px;
-}
+
+
 
 /* Home Page */
 
@@ -156,7 +151,7 @@ li.dropdown {
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-  
+  font-family: "Special Elite",sans-serif;
 }
 .maintime{
   color: #008CBA;
@@ -172,9 +167,10 @@ li.dropdown {
 }
 .mainwifi{
   color: #d2f608;
+  font-family: "Mansalva", sans-serif;
 }
 th, td{
-  padding: 0 25px 0 0;
+  padding: 0 25px 0 0; 
 }
 sup{
   font-size: larger;
@@ -201,6 +197,7 @@ sup{
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+  font-family: "Special Elite",sans-serif;
 }
 .clockicon {
     background: url('Icons/clock.svg');
@@ -221,12 +218,13 @@ sup{
 }
 .updatetime{
   text-align: center;
+  font-size: larger;
 }
 .syncrtc{
   text-align: center;
 }
 input[type=submit] {
-  background-color: #4706d4;
+  background-color: #3f0aec;
   border-radius: 16px;
   color: #fafbf8;
   padding: 2px 10px;
@@ -236,23 +234,136 @@ input[type=submit] {
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.btn-group{
+  text-align: center;
+  display: inline-flex;
+}
+.form-group{
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.updatetime .updateRTC{
+  background-color: #050801;
+  border: 2px solid #03e9f4;
+  color: #03e9f4;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.updatetime .updateRTC:not(:last-child){
+  border-right: none;
+}
+.updatetime .updateRTC:hover{
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.syncrtc .sync{
+  background-color: #050801;
+  border: 2px solid #03e9f4;
+  color: #03e9f4;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.syncrtc .sync:not(:last-child){
+  border-right: none;
+}
+.syncrtc .sync:hover{
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.btn-group .button{
+  background-color: #050801;
+  border: 2px solid #03e9f4;
+  color: #03e9f4;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.btn-group .button:not(:last-child){
+  border-right: none;
+}
+.btn-group .button:hover{
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+
 
 /* Alarm Settings Page */
-.alarmpage{
-  color: rgb(247, 249, 250);
-}
 .alarminfo{
   align-items: center;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-family: "Special Elite",sans-serif;
 }
 .alarm{
-  color: gold;
+  color: rgb(255, 42, 0);
 }
 .alarm1{
   color: #008CBA;
-  padding: 10px;
+  padding: 5px;
+}
+.alarminfo .alarmbtn{
+  background-color: #050801;
+  border: 2px solid #f40303;
+  color: #f40303;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.alarminfo .alarmbtn:not(:last-child){
+  border-right: none;
+}
+.alarminfo .alarmbtn:hover{
+  background: #f40303;
+    color: #050801;
+    box-shadow: 0 0 5px #f40303,
+                0 0 25px #f40303,
+                0 0 50px #f40303,
+                0 0 200px #f40303;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
 /* Wifi Settings Page */
@@ -260,15 +371,16 @@ input[type=submit] {
 .wifitable{
   border-collapse: collapse;
   width: auto;
-  height: 150px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Special Elite",sans-serif;
 }
 .currentwifi{
   color: #03bf10;
-  font-size: 30px;
+  font-size: 20px;
 }
 .wifiinput{
   border-collapse: collapse;
@@ -277,43 +389,68 @@ input[type=submit] {
   margin-right: auto;
   text-align: center;
 }
+.wifiinput .wifibtn{
+  background-color: #050801;
+  border: 2px solid #0bf403;
+  color: #0bf403;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.wifiinput .wifibtn:not(:last-child){
+  border-right: none;
+}
+.wifiinput .wifibtn:hover{
+  background: #0bf403;
+    color: #050801;
+    box-shadow: 0 0 5px #0bf403,
+                0 0 25px #0bf403,
+                0 0 50px #0bf403,
+                0 0 200px #0bf403;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.restart{
+border-collapse: collapse;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.restart .rebootbtn{
+  background-color: #050801;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.restart .rebootbtn:not(:last-child){
+  border-right: none;
+}
+.restart .rebootbtn:hover{
+  background: #ff0000;
+    color: #050801;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 200px #ff0000;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
 
 /*about page*/
 
-.wolficon {
-  background: url('Icons/favicon.svg');
-  background-size: contain;
-  height: 50px;
-  width: 50px;
-  display: block;
-  padding: 3px;
-  background-color: aliceblue;
-  border-radius: 5px;
-  border: 10px solid aliceblue;
-  border-color: aliceblue;
-}
-.wolficon:hover{
-  background-color: #6a6868;
-  border: 10px solid #6a6868;
-  border-color: #6a6868;
-}
-.githubicon {
-  background: url('Icons/github-mark.svg');
-  background-size: contain;
-  height: 50px;
-  width: 50px;
-  display: block;
-  padding: 3px;
-  background-color: aliceblue;
-  border-radius: 5px;
-  border: 10px solid aliceblue;
-  border-color: aliceblue;
-}
-.githubicon:hover{
-  background-color: #6a6868;
-  border: 10px solid #6a6868;
-  border-color: #6a6868;
-}
 .pabout{
   color: aliceblue;
   width: 80%;
@@ -323,8 +460,8 @@ input[type=submit] {
   text-align: center;
   letter-spacing: 5px;
   line-height: 2.0;
-  font-family:cursive;
-  font-size: larger;
+  font-family:"Special Elite",sans-serif;
+  font-size: medium;
 }
 .links{
     vertical-align: top;
@@ -341,15 +478,34 @@ input[type=submit] {
   margin-right: auto;
   text-align: center;
 }
-a:visited{
-  color: #03bf10;
-}
-a:link{
-  color: #03bf10;
-}
 a:hover{
-  color: #09b011;
+  background: #fbff01;
+  color: #050801;
+    box-shadow: 0 0 5px #fbff01,
+                0 0 25px #fbff01,
+                0 0 50px #fbff01,
+                0 0 200px #fbff01;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
+a{
+  background-color: #050801;
+  border: 2px solid #fbff01;
+  color: #fbff01;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Special Elite", sans-serif;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+a.a:not(:last-child){
+  border-right: none;
+}
+
+
 
 /* brightness slider */
 
