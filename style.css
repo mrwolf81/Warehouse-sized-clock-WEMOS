@@ -188,7 +188,7 @@ sup{
   color: blueviolet;
 }
 .updatesection{
-  padding: 20px;
+  padding: 5px;
 }
 .ntptable{
   border-collapse: collapse;
@@ -237,6 +237,7 @@ input[type=submit] {
 .btn-group{
   text-align: center;
   display: inline-flex;
+  padding-top: 5px;
 }
 .form-group{
   display: block;
@@ -247,11 +248,11 @@ input[type=submit] {
   background-color: #050801;
   border: 2px solid #03e9f4;
   color: #03e9f4;
-  padding: 15px 32px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   font-family: "Special Elite", sans-serif;
   font-weight: bolder;
@@ -269,41 +270,15 @@ input[type=submit] {
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
-.syncrtc .sync{
-  background-color: #050801;
-  border: 2px solid #03e9f4;
-  color: #03e9f4;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  font-family: "Special Elite", sans-serif;
-  font-weight: bolder;
-  border-radius: 20px;
-}
-.syncrtc .sync:not(:last-child){
-  border-right: none;
-}
-.syncrtc .sync:hover{
-  background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-}
 .btn-group .button{
   background-color: #050801;
   border: 2px solid #03e9f4;
   color: #03e9f4;
-  padding: 15px 32px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   font-family: "Special Elite", sans-serif;
   font-weight: bolder;

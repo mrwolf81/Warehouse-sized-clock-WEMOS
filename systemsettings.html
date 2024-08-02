@@ -54,6 +54,12 @@
         <th><span class="text" id="datertc">%DATERTC%</span></th>
         <th></th>
       </tr>
+      <tr class="rtctime">
+        <th><span class="material-symbols-outlined">calendar_month</span></th>
+        <th><span class="text">RTC DST : </span></th>
+        <th><span class="text" id="datertc">%RTCDST%</span></th>
+        <th></th>
+      </tr>
     </table>
   </div>
 </section>
@@ -65,14 +71,26 @@
       <input type="submit" value="Update RTC" class="updateRTC">
     </form>
   </div>
-  <br>
-  <div class="syncrtc">
+</section>
+  <section class="form-group">
+  <div class="btn-group">
     <form action="/syncrtc">
-      <input type="submit" value="Sync RTC" class="sync" id="sync" name="sync">
+      <input type="submit" value="Sync RTC" class="button" id="sync" name="sync">
     </form>
   </div>
-  <div>
-</section>
+  </section>
+  
+  <section class="form-group">
+    <div class="btn-group">
+      <form action="/rtcdston">
+        <input type="submit" value="DST ON" class="button" id="RTCDSTON" name="RTCDSTON">
+      </form>
+      <form action="/rtcdstoff">
+        <input type="submit" value="DST OFF" class="button" id="RTCDSTOFF" name="RTCDSTOFF">
+      </form>
+    </div>
+    </section>
+    
 
 <section class="form-group">
   <div class="btn-group">
@@ -84,7 +102,6 @@
     </form>
   </div>
 </section>
-
 
 <section>
 <div class="slidecontainer">
@@ -101,15 +118,6 @@ console.log(updRTC);
 xhr.open("GET", "/updatertc?value="+updRTC, true);
 xhr.send();
 }
-
-
-
-
-
-//const toggle = document.querySelector('#toggle1');
-//const updateBackground = (event) => {
- ////document.body.classList.toggle1('on');
-//}
 
 toggle.addEventListener("click", () => document.body.classList.toggle('on') , false);
   function updateSliderPWM(element) {
